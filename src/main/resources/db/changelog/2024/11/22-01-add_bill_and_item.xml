@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd">
+
+
+    <changeSet id="1732263745144-1" author="ikuchmin">
+        <createTable tableName="bill_item">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_bill_item"/>
+            </column>
+            <column name="position_name" type="VARCHAR"/>
+            <column name="bill" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1732263757778-1" author="ikuchmin">
+        <createTable tableName="bill">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_bill"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
